@@ -18,8 +18,8 @@ const GameCarousel = ({ games }) => {
             />
             <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
               <h3>{game.name}</h3>
-              <Link to={`/game/${game.id}`} className="btn btn-primary mt-2">
-                View Details
+              <Link to={`/game/${game.id}`} style={{ padding: "12px 30px", fontSize: "1.1rem", backgroundColor: "#d77474" }} className="btn mt-2">
+                Detalles
               </Link>
             </div>
           </div>

@@ -5,7 +5,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3" style={{ borderBottom: "2px solid #444" }}>
       <div className="container">
         <Link to="/" className="navbar-brand" style={{ fontWeight: "bold", fontSize: "1.5rem", letterSpacing: "2px" }}>
-          GameExplorer
+        VideoJuegos Moya
         </Link>
         <button
           className="navbar-toggler"
@@ -22,22 +22,22 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link to="/" className="nav-link" style={navLinkStyle}>
-                Home
+                Inicio
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/games" className="nav-link" style={navLinkStyle}>
-                Games
+                Juegos
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/publishers" className="nav-link" style={navLinkStyle}>
-                Publishers
+                Creadores
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/tags" className="nav-link" style={navLinkStyle}>
-                Tags
+                Etiquetas
               </Link>
             </li>
           </ul>

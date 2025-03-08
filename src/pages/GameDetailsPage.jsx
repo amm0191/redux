@@ -62,6 +62,7 @@ const GameDetailsPage = () => {
   }
 
   return (
+    <main style={{ backgroundColor: "#E5DAD9" }}>
     <div className="container py-5">
       <h1 className="display-4 mb-4">{game.name}</h1>
       <img
@@ -143,6 +144,7 @@ const GameDetailsPage = () => {
         </div>
       </div>
     </div>
+    </main>
   )
 }
 

@@ -31,15 +31,16 @@ const TagsPage = () => {
   }
 
   return (
+    <main style={{ backgroundColor: "#E5DAD9" }}>
     <div className="container py-5">
       {/* Título principal */}
       <h1 className="display-4 mb-4 text-center" style={{ fontWeight: "bold", color: "#ff6f61" }}>
-        Explore Tags
+        Explorar Etiquetas
       </h1>
 
       {/* Formulario de búsqueda */}
       <form onSubmit={handleSearch} className="mb-5">
-        <div className="input-group shadow-sm rounded-pill">
+        <div className="input-group shadow-sm rounded-pill gap-3">
           <input
             type="text"
             className="form-control border-0"
@@ -48,8 +49,8 @@ const TagsPage = () => {
             placeholder="Search for tags..."
             style={{ padding: "15px", fontSize: "1rem", borderRadius: "50px" }}
           />
-          <button type="submit" className="btn btn-primary rounded-pill" style={{ padding: "12px 30px", fontSize: "1.1rem" }}>
-            Search
+          <button type="submit"  className="btn rounded-pill" style={{ padding: "12px 30px", fontSize: "1.1rem", backgroundColor: "#d77474" }}>
+            Buscar
           </button>
         </div>
       </form>
@@ -58,9 +59,9 @@ const TagsPage = () => {
       <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
         {tags.map((tag) => (
           <div key={tag.id} className="col">
-            <Link to={`/games/tag/${tag.id}`} className="text-decoration-none">
+            <Link to={`/games/tag/${tag.id}`}  className="text-decoration-none">
               <div className="card h-100" style={{ borderRadius: "10px", transition: "all 0.3s ease" }}>
-                <div className="card-body">
+                <div style={{ padding: "12px 30px", fontSize: "1.1rem", backgroundColor: "#d77474" }} className="card-body">
                   <h5 className="card-title" style={{ fontWeight: "bold", color: "#333" }}>
                     {tag.name}
                   </h5>
@@ -75,6 +76,7 @@ const TagsPage = () => {
       {/* Paginación */}
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
     </div>
+    </main>
   )
 }
 

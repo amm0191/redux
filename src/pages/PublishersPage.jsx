@@ -31,6 +31,7 @@ const PublishersPage = () => {
   }
 
   return (
+    <main style={{ backgroundColor: "#E5DAD9" }}>
     <div className="container py-5">
       {/* Título principal */}
       <h1 className="display-4 mb-4 text-center" style={{ fontWeight: "bold", color: "#ff6f61" }}>
@@ -39,7 +40,7 @@ const PublishersPage = () => {
 
       {/* Formulario de búsqueda */}
       <form onSubmit={handleSearch} className="mb-5">
-        <div className="input-group shadow-sm rounded-pill">
+        <div className="input-group shadow-sm rounded-pill gap-3">
           <input
             type="text"
             className="form-control border-0"
@@ -48,8 +49,8 @@ const PublishersPage = () => {
             placeholder="Search for publishers..."
             style={{ padding: "15px", fontSize: "1rem", borderRadius: "50px" }}
           />
-          <button type="submit" className="btn btn-primary rounded-pill" style={{ padding: "12px 30px", fontSize: "1.1rem" }}>
-            Search
+          <button type="submit" className="btn  rounded-pill" style={{ padding: "12px 30px", fontSize: "1.1rem", backgroundColor: "#d77474" }}>
+            Buscar
           </button>
         </div>
       </form>
@@ -62,7 +63,7 @@ const PublishersPage = () => {
             to={`/publisher/${publisher.id}`}
             className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
             style={{
-              backgroundColor: "#1e1e1e",
+              backgroundColor: "#E0AD9A",
               color: "#fff",
               borderRadius: "10px",
               marginBottom: "15px",
@@ -71,7 +72,7 @@ const PublishersPage = () => {
             }}
           >
             <span>{publisher.name}</span>
-            <span className="badge bg-primary rounded-pill">{publisher.games_count} games</span>
+            <span style={{ padding: "12px 30px", fontSize: "1.1rem", backgroundColor: "#d77474"}} className="badge rounded-pill">{publisher.games_count} juegos</span>
           </Link>
         ))}
       </div>
@@ -79,6 +80,7 @@ const PublishersPage = () => {
       {/* Paginación */}
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
     </div>
+  </main>
   )
 }
 

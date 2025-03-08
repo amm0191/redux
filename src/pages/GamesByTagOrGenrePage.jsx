@@ -25,6 +25,7 @@ const GamesByTagOrGenrePage = () => {
   }, [type, id, currentPage])
 
   return (
+    <main style={{ backgroundColor: "#E5DAD9" }}>
     <div className="container py-5">
       <h1 className="display-4 mb-4">
         Games by {type === "tag" ? "Tag" : "Genre"}
@@ -53,9 +54,10 @@ const GamesByTagOrGenrePage = () => {
           </div>
         </>
       ) : (
-        <div className="text-center">No games found</div>
+        <div className="text-center">Videojuego no encontrado</div>
       )}
     </div>
+    </main>
   )
 }
 
